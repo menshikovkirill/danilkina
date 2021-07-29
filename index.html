@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>calculation</title>
+        <style>
+            .container{
+                display: flex;
+                justify-content: center;
+            }
+            input{
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <span>искомое число:</span><input type="text" id="x"/>
+            <span>ввод(десятичные дробы - через точку): </span><input type="text" id="y"/>
+        </div>
+
+        <script>
+            document.querySelector("#y").addEventListener("keyup", function(){
+                var value = +this.value;
+                if(this.value){
+                    document.querySelector("#x").value = value * 100 / 94;
+                }
+            });
+        </script>
+    </body>
+</html>
